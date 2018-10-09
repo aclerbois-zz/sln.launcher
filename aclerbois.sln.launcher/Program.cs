@@ -12,7 +12,7 @@ namespace aclerbois.sln.launcher
             var solutionFiles = Directory.EnumerateFiles(Environment.CurrentDirectory, "*.sln");
             if (!solutionFiles.Any())
             {
-                Console.WriteLine("No solution file found.");
+                Console.WriteLine("No solution file found in this directory.");
                 return;
             }
             if (solutionFiles.Count() == 1)
@@ -22,7 +22,7 @@ namespace aclerbois.sln.launcher
             }
 
             int i = 1;
-            Console.WriteLine("Hi, you have more than one solution available in this directory, please select one.");
+            Console.WriteLine("Hi, you have multiple solution files in this directory, please select one.");
             foreach (var fileName in solutionFiles)
             {
                 var fileInformation = new System.IO.FileInfo(fileName);
@@ -33,7 +33,7 @@ namespace aclerbois.sln.launcher
             var isSuccessfullyParsed = GetFileChoice(out int solutionIndexChoiced, solutionFiles.Count());
             while (!isSuccessfullyParsed)
             {
-                Console.Write("Your choice isn't valid, please try again: ");
+                Console.Write("Invalid choice, please try again: ");
                 isSuccessfullyParsed = GetFileChoice(out solutionIndexChoiced, solutionFiles.Count());
             }
             ExecuteSolution(solutionFiles.ToArray()[solutionIndexChoiced - 1]);
@@ -46,7 +46,7 @@ namespace aclerbois.sln.launcher
 
         private static void ExecuteSolution(string fileName)
         {
-            Console.WriteLine($"Launching the file {fileName}");
+            Console.WriteLine($"Launching {fileName}");
             var si = new ProcessStartInfo
             {
                 CreateNoWindow = true,
