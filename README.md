@@ -8,6 +8,9 @@ A dotnet tools allows you to launch Visual Studio with a .sln file in the curren
 ## Build status 
 [![Build Status](https://aclerbois.visualstudio.com/aclerbois.sln.launcher/_apis/build/status/aclerbois.sln.launcher-CI)](https://aclerbois.visualstudio.com/aclerbois.sln.launcher/_build/latest?definitionId=12)
 
+## Deployment status
+[![Deployment Status](https://aclerbois.vsrm.visualstudio.com/_apis/public/Release/badge/a08f2184-e493-41ce-af0f-7ffbc4a8ed53/1/1)](https://aclerbois.vsrm.visualstudio.com/_apis/public/Release/badge/a08f2184-e493-41ce-af0f-7ffbc4a8ed53/1/1)
+
 ## How to install
 In order to use this tool, you must have the .NET Core SDK 2.1+.
 You can install the tool by running the following line.
